@@ -1,0 +1,493 @@
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rss version="2.0">
+<channel>
+<title>ELOG Contributions</title>
+<link>https://elog.psi.ch/elogs/Contributions</link>
+<description>Contributions to ELOG</description>
+<generator>ELOG V3.1.5</generator>
+<image>
+<url>https://elog.psi.ch/elogs/Contributions/elog.png</url>
+<title>ELOG Contributions</title>
+<link>https://elog.psi.ch/elogs/Contributions</link>
+</image>
+<item>
+<title>rami khrais, mailto:rami.khrais@sesame.org.jo, Other, Fixing repeating first inline_image in email, Stable, Thu Mar 10 11:30:20 2022 by rami khrais</title>
+<link>https://elog.psi.ch/elogs/Contributions/154</link>
+<description>
+&lt;p&gt;Fixing&amp;nbsp;repeating first image in email (email notification)&amp;nbsp;when the user submit a new log with in_line images.&lt;/p&gt;</description>
+<pubDate>
+Thu, 03 Mar 2022 12:01:55 +0100</pubDate>
+</item>
+<item>
+<title>Anthony J Krishock, mailto:ajkrishock@gmail.com, Theme/Skin, Astronomical logbook using Elog, Stable, Tue Dec  7 01:44:25 2021 by Anthony J Krishock</title>
+<link>https://elog.psi.ch/elogs/Contributions/153</link>
+<description>
+&lt;p&gt;Hello all,&lt;/p&gt;
+
+&lt;p&gt;I became aware of the usefulness of Elog while working at Brookhaven National Lab. Since that time, I have developed a version of Elog that can be used as a log book for observations in Astronomy (my longtime hobby). Attached is my default.css theme and replacement icon files that match the theme. The color scheme is chosen to minimize bright lights and preserve night vision&lt;/p&gt;
+
+&lt;p&gt;To install, just place the default.css file in the default theme directory and copy over the icon files into the default theme directory and replace the default ones.&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Comments and suggestions welcome!&lt;/p&gt;
+
+&lt;p&gt;Thank you&lt;/p&gt;</description>
+<pubDate>
+Tue, 07 Dec 2021 01:38:23 +0100</pubDate>
+</item>
+<item>
+<title>Laurent Jean-Rigaud, mailto:lollspam@free.fr, Other, Re: Re: RPM build process enhancements, Stable, Wed Mar  4 18:45:05 2020 by Laurent Jean-Rigaud</title>
+<link>https://elog.psi.ch/elogs/Contributions/152</link>
+<description>
+&lt;p&gt;Sorry, the patch is malformed for the template file. Check PJ.&lt;/p&gt;
+
+&lt;p&gt;Bye,&lt;/p&gt;
+
+&lt;p&gt;Laurent&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;table align=&quot;center&quot; cellspacing=&quot;1&quot; style=&quot;border:1px solid #486090; width:98%&quot;&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td style=&quot;background-color:#486090&quot;&gt;Laurent Jean-Rigaud wrote:&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td style=&quot;background-color:#FFFFB0&quot;&gt;
+			&lt;p&gt;Hi Stefan,&lt;/p&gt;
+
+			&lt;p&gt;2nd patch for RPM build which adds :&lt;/p&gt;
+
+			&lt;ul&gt;
+				&lt;li&gt;dynamic build options for krb5/ldap/pam/ssl support :
+				&lt;ul&gt;
+					&lt;li&gt;for git / non rpm users :&amp;nbsp;
+					&lt;ul&gt;
+						&lt;li&gt;buildrpm version release [-krb5] [-ldap] [-pam] [-ssl]&lt;/li&gt;
+					&lt;/ul&gt;
+					&lt;/li&gt;
+					&lt;li&gt;for rpm users using SRPMS (dependances are managed) :
+					&lt;ul&gt;
+						&lt;li&gt;rpm -i elog-ver-rel.src.rpm &amp;amp;&amp;amp; rpmbuld -bb [--use krb5] [--use ldap] [--use pam] [--use ssl] ~/rpmbuild/SPECS/elog.spec&lt;/li&gt;
+					&lt;/ul&gt;
+					&lt;/li&gt;
+				&lt;/ul&gt;
+				&lt;/li&gt;
+				&lt;li&gt;dynamic 2 last changelog entries :
+				&lt;ul&gt;
+					&lt;li&gt;last with build information with
+					&lt;ul&gt;
+						&lt;li&gt;dynamic user &amp;#39;s info (use your info if builded from PSI, or use %packager from ~/.rpmmacros if exists, or set to username username@ostname)&lt;/li&gt;
+						&lt;li&gt;build options list (KBR5, LDAP, PAM, SSL)&lt;/li&gt;
+					&lt;/ul&gt;
+					&lt;/li&gt;
+					&lt;li&gt;before last for product changelog of current ELOG version-release&lt;/li&gt;
+				&lt;/ul&gt;
+				&lt;/li&gt;
+				&lt;li&gt;customrel flag for local rebuild :
+				&lt;ul&gt;
+					&lt;li&gt;release = %elogrel%{?customrel}%{?dist)&lt;/li&gt;
+					&lt;li&gt;so custom builder can add --define &amp;#39;customrel NSA&amp;#39;&amp;nbsp; at rpmbuild command or in .rpmmacros file -&amp;gt; elog-3.1.4-2.NSA.el7.x86_64.rpm by example.&lt;/li&gt;
+				&lt;/ul&gt;
+				&lt;/li&gt;
+				&lt;li&gt;elog version and release are delivered in specfile as default for rebuild (tarball name uses it so it can not be changed for local rebuild from SRPMS).&lt;/li&gt;
+				&lt;li&gt;buildrpm uses ~/rpmbuild/SPECS/elog.spec generated from elog.spec.template (elog.spec is deleted in repo, replaced by elog.spec.template).&lt;/li&gt;
+			&lt;/ul&gt;
+
+			&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+			&lt;p&gt;Tested on</description>
+<pubDate>
+Wed, 04 Mar 2020 18:40:57 +0100</pubDate>
+</item>
+<item>
+<title>Laurent Jean-Rigaud, mailto:lollspam@free.fr, Other, Re: RPM build process enhancements, Stable, Wed Mar  4 18:40:40 2020 by Laurent Jean-Rigaud</title>
+<link>https://elog.psi.ch/elogs/Contributions/151</link>
+<description>
+&lt;p&gt;Hi Stefan,&lt;/p&gt;
+
+&lt;p&gt;2nd patch for RPM build which adds :&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;dynamic build options for krb5/ldap/pam/ssl support :
+	&lt;ul&gt;
+		&lt;li&gt;for git / non rpm users :&amp;nbsp;
+		&lt;ul&gt;
+			&lt;li&gt;buildrpm version release [-krb5] [-ldap] [-pam] [-ssl]&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;for rpm users using SRPMS (dependances are managed) :
+		&lt;ul&gt;
+			&lt;li&gt;rpm -i elog-ver-rel.src.rpm &amp;amp;&amp;amp; rpmbuld -bb [--use krb5] [--use ldap] [--use pam] [--use ssl] ~/rpmbuild/SPECS/elog.spec&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;dynamic 2 last changelog entries :
+	&lt;ul&gt;
+		&lt;li&gt;last with build information with
+		&lt;ul&gt;
+			&lt;li&gt;dynamic user &amp;#39;s info (use your info if builded from PSI, or use %packager from ~/.rpmmacros if exists, or set to username username@ostname)&lt;/li&gt;
+			&lt;li&gt;build options list (KBR5, LDAP, PAM, SSL)&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;before last for product changelog of current ELOG version-release&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;customrel flag for local rebuild :
+	&lt;ul&gt;
+		&lt;li&gt;release = %elogrel%{?customrel}%{?dist)&lt;/li&gt;
+		&lt;li&gt;so custom builder can add --define &amp;#39;customrel NSA&amp;#39;&amp;nbsp; at rpmbuild command or in .rpmmacros file -&amp;gt; elog-3.1.4-2.NSA.el7.x86_64.rpm by example.&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;elog version and release are delivered in specfile as default for rebuild (tarball name uses it so it can not be changed for local rebuild from SRPMS).&lt;/li&gt;
+	&lt;li&gt;buildrpm uses ~/rpmbuild/SPECS/elog.spec generated from elog.spec.template (elog.spec is deleted in repo, replaced by elog.spec.template).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Tested on EL6 and EL7 x86_64 :-)&lt;/p&gt;
+
+&lt;p&gt;Bye&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;table align=&quot;center&quot; cellspacing=&quot;1&quot; style=&quot;border:1px solid #486090; width:98%&quot;&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td style=&quot;background-color:#486090&quot;&gt;Laurent Jean-Rigaud wrote:&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td style=&quot;background-color:#FFFFB0&quot;&gt;
+			&lt;p&gt;Hi Stefan,&lt;/p&gt;
+
+			&lt;p&gt;I enclosed a patch for RPM build process available on GIT.&lt;/p&gt;
+
+			&lt;p&gt;changes :&lt;/p&gt;
+
+			&lt;ul&gt;
+				&lt;li&gt;rpmbuild :
+				&lt;ul&gt;
+					&lt;li&gt;checks if p</description>
+<pubDate>
+Mon, 02 Mar 2020 14:31:12 +0100</pubDate>
+</item>
+<item>
+<title>Laurent Jean-Rigaud, mailto:lollspam@free.fr, Other, RPM build process enhancements, Stable, Fri Feb 21 19:14:53 2020 by Laurent Jean-Rigaud</title>
+<link>https://elog.psi.ch/elogs/Contributions/150</link>
+<description>
+&lt;p&gt;Hi Stefan,&lt;/p&gt;
+
+&lt;p&gt;I enclosed a patch for RPM build process available on GIT.&lt;/p&gt;
+
+&lt;p&gt;changes :&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;rpmbuild :
+	&lt;ul&gt;
+		&lt;li&gt;checks if provider or custom build (the rm/mv are done on your computers only :-))&lt;/li&gt;
+		&lt;li&gt;call rpmbuild with version / release given as parameters&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;elog.spec :
+	&lt;ul&gt;
+		&lt;li&gt;last changelog entry date is set to build date&lt;/li&gt;
+		&lt;li&gt;build with debug for debuginfo rpms (product rpms are normally automatically strimmed)&lt;/li&gt;
+		&lt;li&gt;elog.init call /etc/ini.d/functions for RHEL/Centos/Fedora/? dists&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Todo:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;add RPMbuild options for ldap/pam/...&lt;/li&gt;
+	&lt;li&gt;enclosed git log in changelog automatically (the dream :-))&lt;/li&gt;
+&lt;/ul&gt;</description>
+<pubDate>
+Fri, 21 Feb 2020 19:05:18 +0100</pubDate>
+</item>
+<item>
+<title>John, mailto:secondcomingtechnologies@fastmail.com, Script, Re: Custom input forms implementation, Stable, Sat Jun 15 06:19:24 2019 by John</title>
+<link>https://elog.psi.ch/elogs/Contributions/149</link>
+<description>
+&lt;p&gt;I have been trying to get my head around this application module. I assume that after the input is done on this example (ShiftCheck), if goes into the&amp;nbsp; usual file system directorys for storage? Or is it (or can it) goto another db like sql, flat, etc.?&amp;nbsp; I also assume that the &amp;#39;normal&amp;#39; Elog screens we see for input (and output), would be a completely seperate module that you have for (ShiftCheck).. but we do not see them here (as one of the attachments)? I am asking these questions because I am trying to recreate this (type) of input/output system for users, so I would like to know how the &amp;#39;whole picture&amp;#39; is done with your example here. Thanx again.&lt;/p&gt;
+
+&lt;table align=&quot;center&quot; cellspacing=&quot;1&quot; style=&quot;border:1px solid #486090; width:98%&quot;&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td style=&quot;background-color:#486090&quot;&gt;Stefan Ritt wrote:&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td style=&quot;background-color:#FFFFB0&quot;&gt;
+			&lt;p&gt;Dear ELOG users,&lt;/p&gt;
+
+			&lt;p&gt;starting with SVN revision 2328, custom input forms are implemented. This allows application specific formats for check lists etc. In our specific case we had to implement a shift check list, which was quite long. Furthermore the check list should be optimized for an iPad, which we take in the field and record various checks and readings (in our case some gas pressure gauges at the PSI particle accelerator). Since the standard ELOG interface was too inflexible, a completely hand-written form was needed. The form can be activated by the new configuration options&amp;nbsp;&lt;strong&gt;Custom New Form&lt;/strong&gt;, &lt;strong&gt;Custom Edit Form&lt;/strong&gt; and &lt;strong&gt;Custom Display Form&lt;/strong&gt;, one for a new entry, an entry to edit and and entry to display. In our case we used the same form for all three cases. This is how the shift check list looks under the Safari Browser on a PC:&lt;/p&gt;
+
+			&lt;p&gt;&lt;a href=&quot;100917_060210/Capture.png?lb=Contributions&quot;&gt;&lt;img alt=&quot;Capture.png&quot; src=&quot;100917_060210/Capture.png?lb=Contributions&amp;amp;thumb=1&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+			&lt;p&gt;And here is how it looks on the iPad:&lt;/p&gt;
+
+			</description>
+<pubDate>
+Sat, 15 Jun 2019 06:13:07 +0200</pubDate>
+</item>
+<item>
+<title>Maurat, mailto:gm001@free.fr, Script, Code change for LDAP authentication, Stable, Mon Mar 11 10:15:43 2019 by Maurat</title>
+<link>https://elog.psi.ch/elogs/Contributions/148</link>
+<description>
+&lt;p&gt;Hi,&lt;/p&gt;
+
+&lt;p&gt;I had to change code &lt;!--StartFragment--&gt;to authenticate users in my organization&amp;#39;s LDAP directory&lt;!--EndFragment--&gt;. &lt;!--StartFragment--&gt;Indeed, accounts are distributed under several organizational units in my LDAP directory. &lt;!--StartFragment--&gt;&lt;/p&gt;
+
+&lt;p&gt;The current version of the code can&amp;#39;t authenticate accounts when these are in different organizational units&lt;!--EndFragment--&gt;&lt;!--EndFragment--&gt;. Hence my contribution.&lt;/p&gt;
+
+&lt;p&gt;I Use a read account to request LDAP to locate the account that has logged in (with e-mail address in the search filter).&lt;/p&gt;
+
+&lt;p&gt;&lt;!--StartFragment--&gt;I get the number of LDAP entries&lt;!--EndFragment--&gt;. If I have one entry then I call &lt;!--StartFragment--&gt;ldap_get_dn function to get the DN account and then I call &lt;!--StartFragment--&gt;ldap_simple_bind_s using the account&amp;#39;s DN and password to perform LDAP authentication.&lt;/p&gt;
+
+&lt;p&gt;I changed configuration file elogd.cfg. I added two parameters:&lt;code&gt; &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;LDAP DN user = &amp;lt;DN read account&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;LDAP PW user = &amp;lt;password read account&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;I changed code auth.c too (see attached file)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;I had to change Makefile. I added a call to lber library&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;container&quot; title=&quot;Hint: double-click to select code&quot;&gt;
+&lt;div class=&quot;line number1 index0 alt2&quot;&gt;&lt;code&gt;ifdef USE_LDAP&lt;/code&gt;&lt;/div&gt;
+
+&lt;div class=&quot;line number2 index1 alt1&quot;&gt;&lt;code&gt;ifneq ($(USE_LDAP),&lt;/code&gt;&lt;code&gt;0&lt;/code&gt;&lt;code&gt;)&lt;/code&gt;&lt;/div&gt;
+
+&lt;div class=&quot;line number4 index3 alt1&quot;&gt;&lt;code&gt;CFLAGS += -DHAVE_LDAP&lt;/code&gt;&lt;/div&gt;
+
+&lt;div class=&quot;line number6 index5 alt1&quot;&gt;&lt;code&gt;LIBS += -lldap -llber&lt;/code&gt;&lt;/div&gt;
+
+&lt;div class=&quot;line number8 index7 alt1&quot;&gt;&lt;code&gt;endif&lt;/code&gt;&lt;/div&gt;
+
+&lt;div class=&quot;line number10 index9 alt1&quot;&gt;&lt;code&gt;endif&lt;/code&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;!--EndFragment--&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Have good day&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;div class=&quot;line number3 index2 alt2&quot;&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--EndFragment--&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;!--EndFra</description>
+<pubDate>
+Mon, 11 Mar 2019 09:28:15 +0100</pubDate>
+</item>
+<item>
+<title>David Pilgram, mailto:David.Pilgram@epost.org.uk, Script, Re: Check logbook files for wrong references, Stable, Sat Sep 16 15:52:58 2017 by David Pilgram</title>
+<link>https://elog.psi.ch/elogs/Contributions/53</link>
+<description>
+&lt;p&gt;I had to modify the script because I&amp;#39;m still on elog 2.9.2, where there are not subdirectories (by year) for&lt;br /&gt;
+&amp;nbsp;each logbook.&amp;nbsp; Line 5 had to be changed to&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;$logf=q/[0-9][0-9][01][0-9][0-3][0-9]a.log/;&lt;/p&gt;
+
+&lt;p&gt;to do this.&lt;/p&gt;
+
+&lt;p&gt;Once done, I found the deliberate orphan script that I had put in to test, and rather too many other orphans than I had expected.&amp;nbsp; One or two I cannot explain.&amp;nbsp;&amp;nbsp; If I had clicked on any of those entries elog would have gone into infinate loop.&lt;/p&gt;
+
+&lt;p&gt;A very useful utility.&amp;nbsp; Thanks Andreas!&lt;/p&gt;
+
+&lt;table align=&quot;center&quot; cellspacing=&quot;1&quot; style=&quot;border:1px solid #486090; width:98%&quot;&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td style=&quot;background-color:#486090&quot;&gt;Andreas Luedeke wrote:&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td style=&quot;background-color:#FFFFB0&quot;&gt;
+			&lt;div&gt;You can run this little script to check if all entries referenced &amp;quot;In reply to:&amp;quot; do actually exist.&lt;/div&gt;
+
+			&lt;div&gt;To use it, you first need to &amp;quot;cd&amp;quot; to your logbook directory (&amp;quot;cd /usr/local/elog/logbooks&amp;quot;) and then run it without arguments &amp;quot;logcheck&amp;quot;.&lt;/div&gt;
+
+			&lt;div&gt;If it finds references pointing to a missing entry, it&amp;#39;ll print the path to the file with the offending reference and some lines. For example:&lt;/div&gt;
+
+			&lt;div style=&quot;background:#eee;border:1px solid #ccc;padding:5px 10px;&quot;&gt;### error: reference to entry 146, that exists 0 times. Reference is:&lt;br /&gt;
+			### Proscan/2012/120507a.log-&amp;lt;p&amp;gt;[...].&amp;lt;/p&amp;gt;&lt;br /&gt;
+			### Proscan/2012/120507a.log-$ @ MID @ $: 147&lt;br /&gt;
+			### Proscan/2012/120507a.log-Date: Mon, 07 May 2012 13:44:03 +0200&lt;br /&gt;
+			### Proscan/2012/120507a.log:In reply to: 146&lt;br /&gt;
+			### Proscan/2012/120507a.log-Wann: 1336373261&lt;br /&gt;
+			### Proscan/2012/120507a.log-Autor: [...]&lt;br /&gt;
+			### Proscan/2012/120507a.log-Eintrag: Problem&lt;br /&gt;
+			[...]-&lt;/div&gt;
+
+			&lt;p&gt;Very often this happens if an entry is deleted AFTER someone already replied to it. Normally that is no problem, but in some cases you might get infinite</description>
+<pubDate>
+Sat, 16 Sep 2017 15:47:16 +0200</pubDate>
+</item>
+<item>
+<title>Andreas Luedeke, mailto:andreas.luedeke@psi.ch, Script, Check logbook files for wrong references, Stable, Fri Sep 15 17:41:41 2017 by Andreas Luedeke</title>
+<link>https://elog.psi.ch/elogs/Contributions/52</link>
+<description>
+&lt;div&gt;You can run this little script to check if all entries referenced &amp;quot;In reply to:&amp;quot; do actually exist.&lt;/div&gt;
+
+&lt;div&gt;To use it, you first need to &amp;quot;cd&amp;quot; to your logbook directory (&amp;quot;cd /usr/local/elog/logbooks&amp;quot;) and then run it without arguments &amp;quot;logcheck&amp;quot;.&lt;/div&gt;
+
+&lt;div&gt;If it finds references pointing to a missing entry, it&amp;#39;ll print the path to the file with the offending reference and some lines. For example:&lt;/div&gt;
+
+&lt;div style=&quot;background:#eee;border:1px solid #ccc;padding:5px 10px;&quot;&gt;### error: reference to entry 146, that exists 0 times. Reference is:&lt;br /&gt;
+### Proscan/2012/120507a.log-&amp;lt;p&amp;gt;[...].&amp;lt;/p&amp;gt;&lt;br /&gt;
+### Proscan/2012/120507a.log-$ @ MID @ $: 147&lt;br /&gt;
+### Proscan/2012/120507a.log-Date: Mon, 07 May 2012 13:44:03 +0200&lt;br /&gt;
+### Proscan/2012/120507a.log:In reply to: 146&lt;br /&gt;
+### Proscan/2012/120507a.log-Wann: 1336373261&lt;br /&gt;
+### Proscan/2012/120507a.log-Autor: [...]&lt;br /&gt;
+### Proscan/2012/120507a.log-Eintrag: Problem&lt;br /&gt;
+[...]-&lt;/div&gt;
+
+&lt;p&gt;Very often this happens if an entry is deleted AFTER someone already replied to it. Normally that is no problem, but in some cases you might get infinite loops and that causes ELOG to hang. The script is not checking for loops, but wrong references might give you a hint where to look.&lt;/p&gt;
+
+&lt;p&gt;The script will print duplicate entries as well, if the referenced entry exist more than once.&lt;/p&gt;
+
+&lt;p&gt;Cheers, Andreas&lt;/p&gt;
+
+&lt;p&gt;PS: never include the string &amp;quot;$ @ MID @ $:&amp;quot; without spaces in an ELOG entry: apparently ELOG cuts off all text from that token on.&lt;/p&gt;</description>
+<pubDate>
+Fri, 15 Sep 2017 17:19:47 +0200</pubDate>
+</item>
+<item>
+<title>Andreas Luedeke, mailto:simon.ebner@psi.ch, Script, Python module to read/write/edit/reply/delete ELOG entries, Stable, Tue Jul 26 10:26:34 2016 by Andreas Luedeke</title>
+<link>https://elog.psi.ch/elogs/Contributions/50</link>
+<description>
+&lt;pre&gt;
+Hello Everybody!
+I would just like to inform you that there is a new Python module available to access and work with ELOG (read/write/edit/reply/delete).
+Currently the module is only supported for Python version 3. The package is pure Python and has no special dependencies. Therefore you can use the package on any machine.
+
+The documentation you can find on &lt;a class=&quot;moz-txt-link-freetext&quot; href=&quot;https://github.com/paulscherrerinstitute/py_elog&quot;&gt;https://github.com/paulscherrerinstitute/py_elog&lt;/a&gt;
+
+If you want to install the package in an Anaconda on your local machine just use
+conda install -c paulscherrerinstitute elog
+(also works from outside PSI - the package is available at &lt;a class=&quot;moz-txt-link-freetext&quot; href=&quot;https://anaconda.org/paulscherrerinstitute/elog&quot;&gt;https://anaconda.org/paulscherrerinstitute/elog&lt;/a&gt;)
+
+If there are issues with the package please use the issue tracker that comes with the github repository
+&lt;a class=&quot;moz-txt-link-freetext&quot; href=&quot;https://github.com/paulscherrerinstitute/py_elog/issues&quot;&gt;https://github.com/paulscherrerinstitute/py_elog/issues&lt;/a&gt; or let me know.
+&lt;/pre&gt;
+
+&lt;pre&gt;
+Best
+Simon&lt;/pre&gt;</description>
+<pubDate>
+Tue, 26 Jul 2016 10:16:22 +0200</pubDate>
+</item>
+<item>
+<title>Hanno Perrey, hanno.perrey@nuclear.lu.se, Script, Re: Re: Custom input forms implementation, Stable, Wed May 11 09:43:34 2016 by Hanno Perrey</title>
+<link>https://elog.psi.ch/elogs/Contributions/49</link>
+<description>
+&lt;table align=&quot;center&quot; cellspacing=&quot;1&quot; style=&quot;border:1px solid #486090; width:98%&quot;&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td style=&quot;background-color:#486090&quot;&gt;Stefan Ritt wrote:&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td style=&quot;background-color:#FFFFB0&quot;&gt;
+			&lt;p&gt;Dear ELOG users,&lt;/p&gt;
+
+			&lt;p&gt;starting with SVN revision 2328, custom input forms are implemented. This allows application specific formats for check lists etc. In our specific case we had to implement a shift check list, which was quite long. Furthermore the check list should be optimized for an iPad, which we take in the field and record various checks and readings (in our case some gas pressure gauges at the PSI particle accelerator). Since the standard ELOG interface was too inflexible, a completely hand-written form was needed. The form can be activated by the new configuration options&amp;nbsp;&lt;strong&gt;Custom New Form&lt;/strong&gt;, &lt;strong&gt;Custom Edit Form&lt;/strong&gt; and &lt;strong&gt;Custom Display Form&lt;/strong&gt;, one for a new entry, an entry to edit and and entry to display. In our case we used the same form for all three cases. This is how the shift check list looks under the Safari Browser on a PC:&lt;/p&gt;
+
+			&lt;p&gt;&lt;a href=&quot;100917_060210/Capture.png?lb=Contributions&quot;&gt;&lt;img alt=&quot;Capture.png&quot; src=&quot;100917_060210/Capture.png?lb=Contributions&amp;amp;thumb=1&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+			&lt;p&gt;And here is how it looks on the iPad:&lt;/p&gt;
+
+			&lt;p&gt;&lt;a href=&quot;100917_061759/IMAG0036.jpg?lb=Contributions&quot;&gt;&lt;img alt=&quot;IMAG0036.jpg&quot; src=&quot;100917_061759/IMAG0036.jpg?lb=Contributions&amp;amp;thumb=1&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+			&lt;p&gt;Each section can be collapsed and expanded (blue arrows at the left), and various internal checks are made before the check list can be submitted.&lt;/p&gt;
+
+			&lt;p&gt;Implementing such forms is however more something for the advanced user, since you have to hand-write HTML with CSS and JavaScript code. It can then however be a powerful method for check lists. Please find in the attachments the &lt;strong&gt;elogd.cfg&lt;/strong&gt; configuration for that logbook and the &lt;strong&gt;shiftcheck.html&lt;/strong&gt; source code file. It is a bit complicated</description>
+<pubDate>
+Wed, 11 May 2016 09:35:23 +0200</pubDate>
+</item>
+<item>
+<title>Daniel Sajdyk, mailto:daniel.sajdyk@gmail.com, Theme/Skin, Simple theme, Beta, Tue Sep  1 07:39:45 2015 by Daniel Sajdyk</title>
+<link>https://elog.psi.ch/elogs/Contributions/47</link>
+<description>
+&lt;p&gt;Hello.&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;I did simple theme for ELOG called &amp;quot;dansaj&amp;quot;.&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;This is verision which I did for my ELOG, and if you have troubles in other configurations, please let me know, and we will correct it.&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Vectors versions of icons you can find in&amp;nbsp;&lt;strong&gt;oryginals&lt;/strong&gt;&amp;nbsp;folder (if you want to transform it).&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;The most current version you can download from my blog -&lt;a href=&quot;http://www.sajdyk.pl/2015/08/elog-theme-czyli-skorka-albo-temat.html&quot;&gt;&amp;nbsp;Elog theme, czyli sk&amp;oacute;rka, albo temat&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Regards&lt;/p&gt;
+
+&lt;p&gt;Daniel.&lt;/p&gt;</description>
+<pubDate>
+Sun, 23 Aug 2015 21:27:00 +0200</pubDate>
+</item>
+<item>
+<title>TorstenJ, mailto:torsten.jakob@jet-services.com, Web site, Problem with Internet Explorer when saving an entry, Stable, Fri May 31 14:20:43 2019 by Stefan Ritt</title>
+<link>https://elog.psi.ch/elogs/Contributions/46</link>
+<description>
+&lt;p&gt;Hi all,&lt;/p&gt;
+
+&lt;p&gt;first off all let me say, that I realy like this great tool. That is a lot of help for keeping our server documentation up-to-date. Thanks to all contributors for that.&lt;/p&gt;
+
+&lt;p&gt;I right here, because I actually have an issue with saving entries working with IE11 (but also in IE9). When ever I enter an entry, and click the save button, the page open a page with the text: &amp;quot;OK 1&amp;quot;&amp;nbsp;&amp;nbsp; or the second attemp: &amp;quot;OK 2&amp;quot;&amp;nbsp;&amp;nbsp; 3rd&amp;nbsp; &amp;quot;OK 3&amp;quot; and so on. To get back to my Item list, I have to click the back button in the internet explorer. I also opens a lot of draft entries in my databases.&amp;nbsp; When I submit my entry, I don&amp;#39;t have an issue, and the entry is saved correctly.&lt;/p&gt;
+
+&lt;p&gt;This issue doesn&amp;#39;t happen when using Google Chrome.&lt;/p&gt;
+
+&lt;p&gt;Had anyone an simlar issue using elog with IE?&amp;nbsp; It would be great to have some help with that issue.&lt;/p&gt;
+
+&lt;p&gt;Thanks&lt;/p&gt;
+
+&lt;p&gt;Torsten&lt;/p&gt;</description>
+<pubDate>
+Fri, 31 Jul 2015 13:52:32 +0200</pubDate>
+</item>
+<item>
+<title>Christof Hanke, mailto:hanke@rzg.mpg.de, Script, systemd-unit file, Stable, 1</title>
+<link>https://elog.psi.ch/elogs/Contributions/45</link>
+<description>
+&lt;p&gt;sample systemd-unit file.&lt;/p&gt;
+
+&lt;p&gt;Use it as you like.&lt;/p&gt;</description>
+<pubDate>
+Thu, 07 May 2015 09:14:25 +0200</pubDate>
+</item>
+<item>
+<title>TimS, mailto:timpie_s@yahoo.com, Script, Re: Custom input forms implementation, Stable, Tue Mar 19 13:18:33 2013 by Stefan Ritt</title>
+<link>https://elog.psi.ch/elogs/Contributions/44</link>
+<description>
+&lt;p&gt;
+&lt;table width=&quot;98%&quot; align=&quot;center&quot; cellspacing=&quot;1&quot; style=&quot;border:1px solid #486090;&quot;&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td cellpadding=&quot;3px&quot; style=&quot;background-color:#486090; font-weidht:bold; color:white;&quot;&gt;&lt;br /&gt;
+            Stefan Ritt wrote:&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td cellpadding=&quot;10px&quot; style=&quot;background-color:#FFFFB0;&quot;&gt;
+            &lt;p&gt;Dear ELOG users,&lt;/p&gt;
+            &lt;p&gt;starting with SVN revision 2328, custom input forms are implemented. This allows application specific formats for check lists etc. In our specific case we had to implement a shift check list, which was quite long. Furthermore the check list should be optimized for an iPad, which we take in the field and record various checks and readings (in our case some gas pressure gauges at the PSI particle accelerator). Since the standard ELOG interface was too inflexible, a completely hand-written form was needed. The form can be activated by the new configuration options&amp;nbsp;&lt;strong&gt;Custom New Form&lt;/strong&gt;, &lt;strong&gt;Custom Edit Form&lt;/strong&gt; and &lt;strong&gt;Custom Display Form&lt;/strong&gt;, one for a new entry, an entry to edit and and entry to display. In our case we used the same form for all three cases. This is how the shift check list looks under the Safari Browser on a PC:&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;100917_060210/Capture.png?lb=Contributions&quot;&gt;&lt;img border=&quot;0&quot; alt=&quot;Capture.png&quot; name=&quot;att0&quot; id=&quot;att0&quot; src=&quot;100917_060210/Capture.png?lb=Contributions&amp;amp;thumb=1&quot; /&gt;&lt;/a&gt;&amp;nbsp;&lt;/p&gt;
+            &lt;p&gt;And here is how it looks on the iPad:&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&quot;100917_061759/IMAG0036.jpg?lb=Contributions&quot;&gt;&lt;img border=&quot;0&quot; alt=&quot;IMAG0036.jpg&quot; name=&quot;att3&quot; id=&quot;att3&quot; src=&quot;100917_061759/IMAG0036.jpg?lb=Contributions&amp;amp;thumb=1&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+            &lt;p&gt;Each section can be collapsed and expanded (blue arrows at the left), and various internal checks are made before the check list can be submitted.&lt;/p&gt;
+            &lt;p&gt;Implementing such forms is however more something for the advanced user, since you have to hand-write HTML with</description>
+<pubDate>
+Tue, 08 Jul 2014 15:43:21 +0200</pubDate>
+</item>
+</channel>
+</rss>
